@@ -1,0 +1,59 @@
+
+/* elements font and box size */
+*{
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+/* main background */
+body{
+    background-image: linear-gradient(-90deg, #008EFF, #126CB2);
+}
+
+/* game card */
+#game-instructions{
+    background-color: #4CB228;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    box-shadow: 0px 0px 30px 0px black;
+}
+
+/* form styles */
+input{
+    width:100%;
+}
+
+input ::placeholder{
+    font-size:10px !important;
+}
+
+/* table styles */
+td{
+    height: 180px;
+    width: 180px;
+}
+
+.corner-up-left{
+    border-right: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+.corner-up-right{
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+.center-table{
+    border:4px solid white;
+}
+
+.corner-down-left{
+    border-top: 4px solid white;
+    border-right: 4px solid white;
+}
+
+.corner-down-right{
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+}
