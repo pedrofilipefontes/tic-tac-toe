@@ -1,10 +1,10 @@
 # Tic Tac Toe
 
-This is a Tic Tac Toe game made with the purpose of improving coding skills having fun at the same time!
+This is a Tic Tac Toe game made with the purpose of improving coding skills having fun at the same time! The game is a classic to be played with friends or alone if you will. Each player marks an "O" or an "X" in the table. The first to complete a row in any direction, wins the game.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This guide will provide you with information regarding how to run the game locally and how to deploy it in a live system if needed.
 
 ### Prerequisites
 
