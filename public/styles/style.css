@@ -11,7 +11,7 @@ body{
 }
 
 /* game card */
-#game-instructions{
+.banner-card{
     background-color: #4CB228;
     margin: auto;
     height: 500px;
@@ -45,7 +45,7 @@ td{
 }
 
 .center-table{
-    border:4px solid white;
+border:4px solid white;
 }
 
 .corner-down-left{

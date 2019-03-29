@@ -1,0 +1,25 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "This is a Tic Tac Toe game made with the purpose of improving coding skills having fun at the same time!",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "eslint": "^5.15.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrofilipefontes/tic-tac-toe.git"
+  },
+  "author": "Pedro Filipe Fontes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrofilipefontes/tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/pedrofilipefontes/tic-tac-toe#readme"
+}
