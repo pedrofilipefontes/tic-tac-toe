@@ -43,5 +43,4 @@ This project is licensed under the ISC License.
 ## Acknowledgments
 
 * The single player game mode is not finished yet. It will not work
-* Inspiration
-* etc
+* Need to reset variables and create game restart
