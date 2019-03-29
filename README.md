@@ -10,12 +10,11 @@ This guide will provide you with information regarding how to run the game local
 
 In order to be able to run a test version of the software in your machine, you will need to have installed:
 
-```
-node.js
-npm
-npm packages: express, body-parser, eslint (optional)
-heroku account created and locally installed
-```
+
+* Node.js
+* npm
+* npm packages: express, body-parser, eslint (optional)
+* Heroku account created and locally installed
 
 ### Installing
 
