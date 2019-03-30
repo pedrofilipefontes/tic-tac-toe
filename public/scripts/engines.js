@@ -1,12 +1,13 @@
 //jshint esversion:6
 
 let playersNum = 1; //define initial number of players
+let playerOneName = "";
+let playerTwoName = "";
 
 const processNames = (numberChosen) => {
 
 
-  let playerOneName = "";
-  let playerTwoName = "";
+
 
   playerOneName = document.getElementById('your-name').value;
 
