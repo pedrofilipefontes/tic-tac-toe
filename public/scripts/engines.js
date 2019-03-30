@@ -1,32 +1,9 @@
 //jshint esversion:6
 
-const main = () => {
-
   let playersNum = 1; //define initial number of players
   let playerOneName = "";
   let playerTwoName = "";
-  
-  $("#game-over").hide();
-  $("#game-stage").hide();
 
-  $("#multi-player").on('click', () => {
-      $('<input id="friend-name" class="mb-3" type="text" placeholder="Player 2" autocomplete="off">').insertAfter('#your-name');
-      playersNum = 2;
-  }); //select 2 players
-
-  $('#single-player').on('click', () => {
-      $('#friend-name').remove();
-      playersNum = 1;
-  }); //select 1 player
-
-
-  $('#start-button').on('click', () => {
-      
-      startGame(processNames(playersNum));
-
-  });
-
-};
 
 
 const processNames = (numberChosen) => {
@@ -163,11 +140,7 @@ let moves = 0;
     //******************************* */
 
 
-
-
-
-
-    const computerMove = () => {   //function to calculate the next computer move
+      const computerMove = () => {   //function to calculate the next computer move
         let computerMoved = true;
         let i;
         let j;
@@ -218,4 +191,20 @@ let moves = 0;
       
       };
 
+
+    const restartGame = () => {
+
+      let moves = 0;
+      let row = 0;
+      let col = 0;
+      let coordinates = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+    ];
+    let result = [];
+
+    main();
+      
+    };
 // passar todas as fileiras - ver onde ha 0 - se ha 0, adicione -1 e calcule todos os resultados - se existe -3 - chamar endgame - se nao existe -3 entao continuar checando as fileiras

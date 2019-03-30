@@ -1,4 +1,9 @@
 //jshint esversion:6
+$("#game-over").hide();
+$("#game-stage").hide();
+
+$(document).ready(() => {
+
 
 const startGame = (numOfPlayers) => {
 
@@ -28,3 +33,34 @@ const startGame = (numOfPlayers) => {
 
 
 };
+
+const main = () => {
+
+  
+  
+    
+  
+    $("#multi-player").on('click', () => {
+        $('<input id="friend-name" class="mb-3" type="text" placeholder="Player 2" autocomplete="off">').insertAfter('#your-name');
+        playersNum = 2;
+    }); //select 2 players
+  
+    $('#single-player').on('click', () => {
+        $('#friend-name').remove();
+        playersNum = 1;
+    }); //select 1 player
+  
+  
+    $('#start-button').on('click', () => {
+        
+        startGame(processNames(playersNum));
+  
+    });
+  
+  };
+
+
+
+    main();
+
+});
