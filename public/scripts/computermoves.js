@@ -66,19 +66,17 @@ const computerMove = () => { //function to calculate the next computer move
       result = [];
     };
 
-    for (let i = 0; i < result.length; i++) { //will run over the array and based on the position, it will check the best position to not let the user win
-      if (result[i] == -2 && computerMoved == false) {
-        console.log('if called');
-        bestMove(i);
+    const testBetterChance = (toTest) => {  //will run over the array and based on the position, it will check the best position to not let the user win
+      for (let i = 0; i < result.length; i++) {
+        if (result[i] == toTest && computerMoved == false) {
+          console.log('if called');
+          bestMove(i);
+        }
       }
-    }
-    for (let j = 0; j < result.length; j++) { //will run over the array and based on the position, it will check the best position to not let the user win
-      if (result[j] == 2 && computerMoved == false) {
-        console.log('if called');
-        bestMove(j);
-      }
-    }
+    };
 
+    testBetterChance(-2);
+    testBetterChance(2);
 
     result = [];
 
