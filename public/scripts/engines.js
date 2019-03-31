@@ -1,13 +1,10 @@
 //jshint esversion:6
 
 let playersNum = 1; //define initial number of players
-let playerOneName = "";
-let playerTwoName = "";
+let playerOneName;
+let playerTwoName;
 
-const processNames = (numberChosen) => {
-
-
-
+const processNames = (numberChosen) => { //processes the players' names into the game
 
   playerOneName = document.getElementById('your-name').value;
 
@@ -24,9 +21,6 @@ const processNames = (numberChosen) => {
 
   return numberChosen;
 };
-
-
-//********************
 
 let moves = 0;
 let row;
@@ -72,11 +66,6 @@ const calculateResult = (resultArray) => { //function to calculate the array wit
   return resultArray;
 };
 
-
-
-
-
-
 const checkResult = () => { //function that checks the result array and verifies if there was a winner
 
   calculateResult(result);
@@ -85,9 +74,9 @@ const checkResult = () => { //function that checks the result array and verifies
 
     if (result[i] === 3) {
       endGame(playerOneName);
-    } else if (result[i] === -3) {
+    } else if (result[i] === -3 || (result[i] == -3 && moves == 9)) {
       endGame(playerTwoName);
-    } else if (moves > 9) {
+    } else if (moves == 9) {
       endGame("no one!");
     } else {
       sumRow = 0;
@@ -101,7 +90,6 @@ const checkResult = () => { //function that checks the result array and verifies
 };
 
 //******** end check result
-
 
 
 const assignMove = (position) => { //function to assign 1 or -1 to a table location based on the player's move
@@ -119,14 +107,10 @@ const assignMove = (position) => { //function to assign 1 or -1 to a table locat
 
   return coordinates;
 };
+
 // ************** end assignMove
 
-
-
-
-
-
-const insertIcon = (iconPosition) => { //function to create an icon in the given position
+const insertIcon = (iconPosition) => { //function to create an icon in the given position according to the move
   let element = document.getElementById(iconPosition);
 
   if (moves % 2 == 0) {
@@ -138,25 +122,5 @@ const insertIcon = (iconPosition) => { //function to create an icon in the given
   element.removeAttribute("id");
   moves++;
 };
-//******************************* */
 
-
-const computerMove = () => { //function to calculate the next computer move
-  let computerMoved = true;
-  let i;
-  let j;
-
-  while (computerMoved) {
-    i = Math.floor(Math.random() * 3 + 1);
-    j = Math.floor(Math.random() * 3 + 1);
-
-    if (coordinates[i - 1][j - 1] == 0) {
-      insertIcon(`cell-${i}${j}`);
-      computerMoved = false;
-    }
-  }
-
-
-};
-
-// passar todas as fileiras - ver onde ha 0 - se ha 0, adicione -1 e calcule todos os resultados - se existe -3 - chamar endgame - se nao existe -3 entao continuar checando as fileiras
+//************************** end insertIcon
