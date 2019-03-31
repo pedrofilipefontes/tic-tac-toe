@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-This is a Tic Tac Toe game made with the purpose of improving coding skills and having fun at the same time! The game is a classic to be played with friends or alone if you will. Each player marks an "O" or an "X" in the table. The first to complete a row in any direction, wins the game. Here is a demo link of the project: https://still-island-57296.herokuapp.com/
+This is a Tic Tac Toe game made with the purpose of improving coding skills and having fun at the same time! The game is a classic to be played with friends or alone if you will. Each player marks an "O" or an "X" in the table. The first to complete a row in any direction, wins the game. [Here is a demo link of the project](https://still-island-57296.herokuapp.com/)
 
 ## Getting Started
 
