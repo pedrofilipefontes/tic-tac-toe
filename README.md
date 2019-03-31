@@ -24,6 +24,7 @@ In order to be able to run a test version of the software in your machine, you w
 
 ```
 $ git clone https://github.com/pedrofilipefontes/tic-tac-toe.git
+$ cd tic-tac-toe
 ```
 
 * In the local folder with the files, start npm and proceed with the details until the package is created
@@ -32,7 +33,7 @@ $ git clone https://github.com/pedrofilipefontes/tic-tac-toe.git
 $ npm init
 ```
 
-* Start the npm packages
+* Install the npm packages
 
 ```
 $ npm install express body-parser
@@ -54,7 +55,7 @@ $ node app.js
 $ sudo npm install -g nodemon
 ```
 
-* Once nodemon is installed, simply run this command from the local folder:
+* Once nodemon is installed, simply run this command from the local folder and later access http://localhost:4000 in your browser:
 
 ```
 $ nodemon start
