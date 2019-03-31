@@ -98,6 +98,7 @@ $ heroku create
 ```
 $ git push heroku master
 ```
+* Wait a little bit until the process finally loads and you will have the link to access the app live!
 ## Built With
 
 * [npm](https://www.npmjs.com/) - Package Manager
