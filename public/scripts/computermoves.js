@@ -12,24 +12,24 @@ const computerMove = () => { //function to calculate the next computer move
     calculateResult(result);
     console.log(result);
 
-    const checkRemaining = (xPos1, yPos1, xPos2, yPos2, xPos3, yPos3) => {
+    const checkRemaining = (xPos1, yPos1, xPos2, yPos2, xPos3, yPos3) => { //take the coordinates and check which one has a blank space to fill
+      const putOnRemain = (coord1, coord2) => {
+        insertIcon(`cell-${coord1}${coord2}`);
+        computerMoved = true;
+        result = [];
+      };
+
       if (coordinates[xPos1 - 1][yPos1 - 1] == 0) {
-        insertIcon(`cell-${xPos1}${yPos1}`);
-        computerMoved = true;
-        result = [];
+        putOnRemain(xPos1, yPos1);
       } else if (coordinates[xPos2 - 1][yPos2 - 1] == 0) {
-        insertIcon(`cell-${xPos2}${yPos2}`);
-        computerMoved = true;
-        result = [];
+        putOnRemain(xPos2, yPos2);
       } else {
-        insertIcon(`cell-${xPos3}${yPos3}`);
-        computerMoved = true;
-        result = [];
+        putOnRemain(xPos3, yPos3);
       }
     };
 
     for (let i = 0; i < result.length; i++) { //will run over the array and based on the position, it will check the best position to not let the user win
-      if (result[i] == 2 && computerMoved == false) {
+      if ((result[i] == 2 || result[i] == -2) && computerMoved == false) {
         console.log('if called');
         switch (i) {
           case 0:

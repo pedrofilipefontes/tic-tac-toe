@@ -5,11 +5,11 @@ $("#game-stage").hide();
 $(document).ready(() => {
 
 
-    const startGame = (numOfPlayers) => {
+    const startGame = (numOfPlayers) => { // function to start the game
 
-        function applyClickGame() {
+        function applyClickGame() { // start this when there is a click on start on an empty cell
 
-            insertIcon(this.id);
+            insertIcon(this.id); //call the function to insert an icon in the empty cell
 
             if (numOfPlayers == 1) {
                 computerMove();
@@ -30,12 +30,13 @@ $(document).ready(() => {
 
 
     $("#multi-player").on('click', () => {
-        $('<input id="friend-name" class="mb-3" type="text" placeholder="Player 2" autocomplete="off">').insertAfter('#your-name');
+
+        document.getElementById("friend-name").removeAttribute("hidden");
         playersNum = 2;
     }); //select 2 players
 
     $('#single-player').on('click', () => {
-        $('#friend-name').remove();
+        document.getElementById("friend-name").setAttribute("hidden", "");
         playersNum = 1;
     }); //select 1 player
 

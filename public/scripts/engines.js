@@ -77,7 +77,7 @@ const checkResult = () => { //function that checks the result array and verifies
     } else if (result[i] === -3 || (result[i] == -3 && moves == 9)) {
       endGame(playerTwoName);
     } else if (moves == 9) {
-      endGame("no one!");
+      endGame("no one! Play again.");
     } else {
       sumRow = 0;
       sumCol = 0;
