@@ -6,7 +6,7 @@ const computerMove = () => { //function to calculate the next computer move
   let i;
   let j;
 
-  const doNotWin = () => { //function to be called when a row has 2 elements from the oponent
+  const calculateMove = () => { //function to be called when a row has 2 elements from the oponent
     console.log('called');
 
     calculateResult(result);
@@ -28,51 +28,63 @@ const computerMove = () => { //function to calculate the next computer move
       }
     };
 
+    const bestMove = (withCase) => {
+      switch (withCase) {
+        case 0:
+          console.log('case check');
+          checkRemaining(1, 1, 1, 2, 1, 3);
+          break;
+        case 1:
+          console.log('case check');
+          checkRemaining(1, 1, 2, 1, 3, 1);
+          break;
+        case 2:
+          console.log('case check');
+          checkRemaining(2, 1, 2, 2, 2, 3);
+          break;
+        case 3:
+          console.log('case check');
+          checkRemaining(1, 2, 2, 2, 3, 2);
+          break;
+        case 4:
+          console.log('case check');
+          checkRemaining(3, 1, 3, 2, 3, 3);
+          break;
+        case 5:
+          console.log('case check');
+          checkRemaining(1, 3, 2, 3, 3, 3);
+          break;
+        case 6:
+          console.log('case check');
+          checkRemaining(1, 1, 2, 2, 3, 3);
+          break;
+        case 7:
+          console.log('case check');
+          checkRemaining(1, 3, 2, 2, 3, 1);
+          break;
+      }
+      result = [];
+    };
+
     for (let i = 0; i < result.length; i++) { //will run over the array and based on the position, it will check the best position to not let the user win
-      if ((result[i] == 2 || result[i] == -2) && computerMoved == false) {
+      if (result[i] == -2 && computerMoved == false) {
         console.log('if called');
-        switch (i) {
-          case 0:
-            console.log('case check');
-            checkRemaining(1, 1, 1, 2, 1, 3);
-            break;
-          case 1:
-            console.log('case check');
-            checkRemaining(1, 1, 2, 1, 3, 1);
-            break;
-          case 2:
-            console.log('case check');
-            checkRemaining(2, 1, 2, 2, 2, 3);
-            break;
-          case 3:
-            console.log('case check');
-            checkRemaining(1, 2, 2, 2, 3, 2);
-            break;
-          case 4:
-            console.log('case check');
-            checkRemaining(3, 1, 3, 2, 3, 3);
-            break;
-          case 5:
-            console.log('case check');
-            checkRemaining(1, 3, 2, 3, 3, 3);
-            break;
-          case 6:
-            console.log('case check');
-            checkRemaining(1, 1, 2, 2, 3, 3);
-            break;
-          case 7:
-            console.log('case check');
-            checkRemaining(1, 3, 2, 2, 3, 1);
-            break;
-        }
+        bestMove(i);
       }
     }
+    for (let j = 0; j < result.length; j++) { //will run over the array and based on the position, it will check the best position to not let the user win
+      if (result[j] == 2 && computerMoved == false) {
+        console.log('if called');
+        bestMove(j);
+      }
+    }
+
 
     result = [];
 
   };
 
-  doNotWin();
+  calculateMove();
 
   while (computerMoved == false && moves < 8) {
     console.log('testing');

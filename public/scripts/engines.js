@@ -3,6 +3,7 @@
 let playersNum = 1; //define initial number of players
 let playerOneName;
 let playerTwoName;
+let endCalled = false;
 
 const processNames = (numberChosen) => { //processes the players' names into the game
 
@@ -121,6 +122,10 @@ const insertIcon = (iconPosition) => { //function to create an icon in the given
   assignMove(element.id);
   element.removeAttribute("id");
   moves++;
+
+  if (moves >= 5 && moves <= 9) { //when number of moves reaches 5, start checking if there is winner
+    checkResult();
+}
 };
 
 //************************** end insertIcon

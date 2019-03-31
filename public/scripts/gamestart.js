@@ -11,12 +11,8 @@ $(document).ready(() => {
 
             insertIcon(this.id); //call the function to insert an icon in the empty cell
 
-            if (numOfPlayers == 1) {
+            if (numOfPlayers == 1 && endCalled == false) {
                 computerMove();
-            }
-
-            if (moves >= 5 && moves <= 9) { //when number of moves reaches 5, start checking if there is winner
-                checkResult();
             }
         }
 
