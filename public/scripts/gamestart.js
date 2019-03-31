@@ -6,7 +6,7 @@ $(document).ready(() => {
 
     const startGame = (numOfPlayers) => { // function to start the game
 
-        function applyClickGame() { // start this when there is a click on start on an empty cell
+        function applyClickGame () { // start this when there is a click on start on an empty cell
 
             insertIcon(this.id); //call the function to insert an icon in the empty cell
 

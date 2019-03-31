@@ -1,14 +1,14 @@
 //jshint esversion:6
 const endGame = (winner) => { //function to end the game
 
-  endCalled = true;
-  setTimeout(() => {
-    $("#game-stage").hide();
-    
-    document.querySelector("#game-over").removeAttribute("hidden");
+    endCalled = true;
+    setTimeout(() => {
+        $("#game-stage").hide();
 
-    $("#winner-name").text(winner);
+        document.querySelector("#game-over").removeAttribute("hidden");
 
-  }, 300);
+        $("#winner-name").text(winner);
+
+    }, 300);
 
 };

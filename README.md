@@ -13,9 +13,9 @@ In order to be able to run a test version of the software in your machine, you w
 
 * Node.js
 * npm
-* npm packages: express, body-parser, eslint and nodemon (last two being optional)
+* npm packages: express, body-parser, nodemon (optional)
 * Heroku account created and locally installed
-* Git extension
+* Git
 
 ### Installing
 
