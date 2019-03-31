@@ -63,17 +63,52 @@ $ nodemon start
 
 ## Deployment
 
-Currently being updated. Please wait.
+The deployment step assumes that you have already installed Heroku in your machine. If not, please get it in [this link](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 
+Once you have it and you are logged in, use the following commands:
+
+* To start git in the directory:
+
+```
+$ git init
+```
+
+* Use git status and make sure that you have the "Procfile" (written in the **exact** same way) within your documents. If not, try checking the .gitignore file or try getting the files from the initial Git repository once more.
+
+```
+$ git status
+```
+
+* Now simply add and commit your project:
+
+```
+$ git add .
+
+$ git commit -m "your message here"
+```
+
+* To create an app environment with Heroku: (if you are not logged in, it will ask your to authenticate the login. You can follow the instructions in the terminal to do it)
+
+```
+$ heroku create
+```
+
+* Deploy the project to the Heroku app you have created:
+
+```
+$ git push heroku master
+```
 ## Built With
 
-Currently being updated. Please wait.
+* [npm](https://www.npmjs.com/) - Package Manager
+* [express](https://www.npmjs.com/package/express) - Code package
+* [body-parser](https://www.npmjs.com/package/body-parser) - Code package
+* [Heroku](https://www.heroku.com/) - Cloud platform
 
 
 ## Authors
 
 * **Pedro Filipe Fontes**
-
 
 ## License
 
@@ -81,5 +116,4 @@ This project is licensed under the ISC License.
 
 ## Acknowledgments
 
-* The single player game mode is not finished yet. It will not work
-* Need to reset variables and create game restart
+* The game **is not** mobile optimized. 
