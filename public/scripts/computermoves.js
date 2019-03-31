@@ -19,7 +19,7 @@ const computerMove = () => { //function to calculate the next computer move
         result = [];
       };
 
-      if (coordinates[xPos1 - 1][yPos1 - 1] == 0) {
+      if (coordinates[xPos1 - 1][yPos1 - 1] == 0) { // if the coordinates position has a value of 0, then use insertIcon to fill in the proper Icon
         putOnRemain(xPos1, yPos1);
       } else if (coordinates[xPos2 - 1][yPos2 - 1] == 0) {
         putOnRemain(xPos2, yPos2);
@@ -66,7 +66,7 @@ const computerMove = () => { //function to calculate the next computer move
       result = [];
     };
 
-    const testBetterChance = (toTest) => {  //will run over the array and based on the position, it will check the best position to not let the user win
+    const testBetterChance = (toTest) => {  //will run over the array and check the possibility to win or not let the user win in the next move
       for (let i = 0; i < result.length; i++) {
         if (result[i] == toTest && computerMoved == false) {
           console.log('if called');
@@ -84,7 +84,7 @@ const computerMove = () => { //function to calculate the next computer move
 
   calculateMove();
 
-  while (computerMoved == false && moves < 8) {
+  while (computerMoved == false && moves < 8) { //if there are no possibilities to win or not let the user win in the next move, get an available random position to fill
     console.log('testing');
     i = Math.floor(Math.random() * 3 + 1);
     j = Math.floor(Math.random() * 3 + 1);
