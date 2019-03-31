@@ -15,7 +15,7 @@ const processNames = (numberChosen) => { //processes the players' names into the
     playerTwoName = 'Computer';
   }
   $('#game-instructions').remove();
-  $('#game-stage').show();
+  document.querySelector("#game-stage").removeAttribute("hidden");
 
   $(`<h2 class="text-white">${playerOneName}</h2>`).insertAfter('#symbol-one');
   $(`<h2 class="text-white">${playerTwoName}</h2>`).insertAfter('#symbol-two');

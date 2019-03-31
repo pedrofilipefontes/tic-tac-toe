@@ -1,6 +1,5 @@
 //jshint esversion:6
-$("#game-over").hide();
-$("#game-stage").hide();
+
 
 $(document).ready(() => {
 

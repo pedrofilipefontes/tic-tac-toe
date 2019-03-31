@@ -4,7 +4,9 @@ const endGame = (winner) => { //function to end the game
   endCalled = true;
   setTimeout(() => {
     $("#game-stage").hide();
-    $("#game-over").show();
+    
+    document.querySelector("#game-over").removeAttribute("hidden");
+
     $("#winner-name").text(winner);
 
   }, 300);
