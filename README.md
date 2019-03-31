@@ -73,10 +73,10 @@ Once you have it and you are logged in, use the following commands:
 $ git init
 ```
 
-* Use git status and make sure that you have the "Procfile" (written in the **exact** same way) within your documents. If not, try checking the .gitignore file or try getting the files from the initial Git repository once more.
+* Use the ls command and make sure that you have the "Procfile" (written in the **exact** same way) within your documents. If not, try checking the .gitignore file or try getting the files from the initial Git repository once more.
 
 ```
-$ git status
+$ ls
 ```
 
 * Now simply add and commit your project:
