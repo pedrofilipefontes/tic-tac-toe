@@ -10,19 +10,19 @@ const computerMove = () => { //function to calculate the next computer move
 
         calculateResult(result);
 
-        const checkRemaining = (xPos1, yPos1, xPos2, yPos2, xPos3, yPos3) => { //take the coordinates and check which one has a blank space to fill
-            const putOnRemain = (coord1, coord2) => {
+        const checkRemaining = (...posArray) => { //take the coordinates and check which one has a blank space to fill
+            const putOnRemain = (coord1, coord2) => { //insert the icon in the remaining space available within the potential row
                 insertIcon(`cell-${coord1}${coord2}`);
                 computerMoved = true;
                 result = [];
             };
 
-            if (coordinates[xPos1 - 1][yPos1 - 1] == 0) { // if the coordinates position has a value of 0, then use insertIcon to fill in the proper Icon
-                putOnRemain(xPos1, yPos1);
-            } else if (coordinates[xPos2 - 1][yPos2 - 1] == 0) {
-                putOnRemain(xPos2, yPos2);
+            if (coordinates[posArray[0] - 1][posArray[1] - 1] == 0) { // if the coordinates position has a value of 0, then use insertIcon to fill in the proper Icon
+                putOnRemain(posArray[0], posArray[1]);
+            } else if (coordinates[posArray[2] - 1][posArray[3] - 1] == 0) {
+                putOnRemain(posArray[2], posArray[3]);
             } else {
-                putOnRemain(xPos3, yPos3);
+                putOnRemain(posArray[4], posArray[5]);
             }
         };
 
