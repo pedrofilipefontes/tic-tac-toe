@@ -5,17 +5,31 @@ let playerOneName;
 let playerTwoName;
 let endCalled = false;
 
+const endGame = (winner) => { //function to end the game
+
+    endCalled = true;
+    setTimeout(() => {
+        $("#game-stage").hide();
+
+        $("#game-over").removeAtt("hidden");
+
+        $("#winner-name").text(winner);
+
+    }, 300);
+
+};
+
 const processNames = (numberChosen) => { //processes the players' names into the game
 
-    playerOneName = document.getElementById('your-name').value;
+    playerOneName = $('#your-name').val();
 
     if (numberChosen == 2) {
-        playerTwoName = document.getElementById('friend-name').value;
+        playerTwoName = $('#friend-name').val();
     } else {
         playerTwoName = 'Computer';
     }
     $('#game-instructions').remove();
-    document.querySelector("#game-stage").removeAttribute("hidden");
+    $("#game-stage").removeAttr("hidden");
 
     $(`<h2 class="text-white">${playerOneName}</h2>`).insertAfter('#symbol-one');
     $(`<h2 class="text-white">${playerTwoName}</h2>`).insertAfter('#symbol-two');

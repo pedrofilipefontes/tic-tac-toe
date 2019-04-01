@@ -17,7 +17,7 @@ $(document).ready(() => {
 
         for (let i = 1; i < 4; i++) {
             for (let j = 1; j < 4; j++) {
-                document.getElementById(`cell-${i}${j}`).addEventListener('click', applyClickGame);
+                $(`#cell-${i}${j}`).on('click', applyClickGame);
             }
         }
     };
@@ -26,12 +26,12 @@ $(document).ready(() => {
 
     $("#multi-player").on('click', () => {
 
-        document.getElementById("friend-name").removeAttribute("hidden");
+        $("#friend-name").removeAttr("hidden");
         playersNum = 2;
     }); //select 2 players
 
     $('#single-player').on('click', () => {
-        document.getElementById("friend-name").setAttribute("hidden", "");
+        $("#friend-name").attr("hidden", "");
         playersNum = 1;
     }); //select 1 player
 
@@ -41,6 +41,5 @@ $(document).ready(() => {
         startGame(processNames(playersNum));
 
     });
-
 
 });
