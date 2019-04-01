@@ -11,7 +11,7 @@ const endGame = (winner) => { //function to end the game
     setTimeout(() => {
         $("#game-stage").hide();
 
-        $("#game-over").removeAtt("hidden");
+        $("#game-over").removeAttr("hidden");
 
         $("#winner-name").text(winner);
 
