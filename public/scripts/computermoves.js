@@ -6,7 +6,7 @@ const computerMove = () => { //function to calculate the next computer move
     let i;
     let j;
 
-    const calculateMove = () => { //function to be called when a row has 2 elements from the oponent
+    const calculateMove = () => { //function to be called when a row has 2 elements of the same type
 
         calculateResult(result);
 

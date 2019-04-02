@@ -5,20 +5,6 @@ let playerOneName;
 let playerTwoName;
 let endCalled = false;
 
-const endGame = (winner) => { //function to end the game
-
-    endCalled = true;
-    setTimeout(() => {
-        $("#game-stage").hide();
-
-        $("#game-over").removeAttr("hidden");
-
-        $("#winner-name").text(winner);
-
-    }, 300);
-
-};
-
 const processNames = (numberChosen) => { //processes the players' names into the game
 
     playerOneName = $('#your-name').val();
@@ -80,6 +66,20 @@ const calculateResult = (resultArray) => { //function to calculate the array wit
     return resultArray;
 };
 
+const endGame = (winner) => { //function to end the game
+
+    endCalled = true;
+    setTimeout(() => {
+        $("#game-stage").hide();
+
+        $("#game-over").removeAttr("hidden");
+
+        $("#winner-name").text(winner);
+
+    }, 300);
+
+};
+
 const checkResult = () => { //function that checks the result array and verifies if there was a winner
 
     calculateResult(result);
@@ -103,7 +103,7 @@ const checkResult = () => { //function that checks the result array and verifies
 
 };
 
-//******** end check result
+
 
 
 const assignMove = (position) => { //function to assign 1 or -1 to a table location based on the player's move
@@ -117,12 +117,10 @@ const assignMove = (position) => { //function to assign 1 or -1 to a table locat
         coordinates[row][col] = -1;
 
     }
-
-
     return coordinates;
 };
 
-// ************** end assignMove
+
 
 const insertIcon = (iconPosition) => { //function to create an icon in the given position according to the move
     let element = document.getElementById(iconPosition);
@@ -141,4 +139,3 @@ const insertIcon = (iconPosition) => { //function to create an icon in the given
     }
 };
 
-//************************** end insertIcon
