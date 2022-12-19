@@ -29,15 +29,11 @@ $ cd tic-tac-toe
 
 * In the local folder with the files, start npm and proceed with the details until the package is created
 
-```
-$ npm init
-```
-
 * Install the npm packages
+```nodejs
+npm install
+```
 
-```
-$ npm install express body-parser
-```
 
 * To access locally simply run:
 
